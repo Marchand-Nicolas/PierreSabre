@@ -19,4 +19,22 @@ public class Yakuza extends Humain {
 				+ " sous dans ma poche. Hi ! Hi !");
 	}
 
+	public int perdre() {
+		reputation--;
+		int perte = getArgent();
+		perdreArgent(perte);
+		parler("J'ai perdu mon duel et mes " + perte + " sous, snif... J'ai déshonoré le clan de " + clan);
+		return perte;
+	}
+
+	public void gagner(int gain) {
+		reputation++;
+		gagnerArgent(gain);
+		parler(" Ce ronin pensait vraiment battre " + getNom() + " du clan de " + clan + " ? Je l'ai dépouillé de ses "
+				+ gain + " sous.");
+	}
+
+	public int getReputation() {
+		return reputation;
+	}
 }
