@@ -24,8 +24,8 @@ public class Humain {
 		System.out.println("Bonjour ! Je m'appelle " + nom + " et j'aime boire du " + boisson + ".");
 	}
 
-	private void parler(String texte) {
-		System.out.println("L'humain " + nom + " : " + texte);
+	protected void parler(String texte) {
+		System.out.println("(" + nom + ") : " + texte);
 	}
 
 	public void boire() {
@@ -42,11 +42,11 @@ public class Humain {
 		}
 	}
 
-	public void gagnerArgent(int gain) {
+	protected void gagnerArgent(int gain) {
 		argent += gain;
 	}
 
-	public void perdreArgent(int perte) {
+	protected void perdreArgent(int perte) {
 		argent -= perte;
 	}
 }
